@@ -10,5 +10,6 @@ jobs:
     - stage: test
       name: "Run test"   
       script:
+        - export GO111MODULE=on
         - make test
         
