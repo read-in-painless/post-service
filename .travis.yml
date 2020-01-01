@@ -1,15 +1,12 @@
 language: go
 
 go:
-  - "1.11.x"
-  - "1.12.x"
   - "1.13.x"
-  - master
+  #- master
 jobs:
   include:
     - stage: test
       name: "Run test"   
       script:
-        - export GO111MODULE=on
         - make test
         
