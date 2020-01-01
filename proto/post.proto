@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+service Post {
+	rpc Create(PostRequest) returns (PostReponse) {}
+}
+
+message PostRequest {
+  string title = 1;
+  string userId = 2;
+  string body = 3;
+  uint32 date = 4;
+  uint32 publishDate = 5;
+  repeated string tags = 6;
+}
+
+enum Status {
+  PENDING = 0;
+  ACCEPTED = 1;
+  MALFORMED = 2; 
+  INPROGRESS = 3;
+  REJECTED = 4;
+  INVALID = 5;
+  PUPLISHING = 6; 
+}
+
+message PostReponse {
+  Status status = 1;
+  string message = 2;
+}
