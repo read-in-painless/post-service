@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	micro "github.com/micro/go-micro"
+	micro "github.com/micro/go-micro/v2"
 	"github.com/read-in-painless/post-service/post"
 	proto "github.com/read-in-painless/post-service/proto"
 )
